@@ -1,0 +1,52 @@
+/*Utility Classes */
+.h-primary {
+    font-size: 1.4rem;
+}
+
+.h-secondary {
+    font-size: 1.1rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.quotation {
+    font-size: 1.2rem;
+}
+
+.btn {
+    padding: 2px 8px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+/* Navigation Bar  */
+#navbar {
+    z-index: 2;
+}
+#navbar ul {
+    flex-direction: column;
+}
+
+#navbar::before {
+    opacity: 1;
+}
+
+/* Home Section  */
+#home-section {
+    height: 115vh;
+}
+
+#home-section::before {
+    height: 300vh;
+}
+
+/* Service Section  */
+#service-section .container .box {
+    width: 300px;
+}
+
+#service-section .box img {
+    width: 250px;
+}

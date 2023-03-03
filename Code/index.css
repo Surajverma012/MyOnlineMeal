@@ -1,0 +1,257 @@
+/* CSS Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* CSS variables */
+:root {
+    --primarycolor: #faa307;
+    --secondarycolor: #e85d04;
+    --thirdcolor: #9d0208;
+    --fourthcolor: #370617;
+    --fifthcolor: #03071e;
+    --whitecolor: white;
+    --primary-shadow: 5px 5px 5px;
+}
+
+/* Utility Classes  */
+.h-primary {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    text-shadow: var(--primary-shadow) var(--fourthcolor);
+}
+
+.h-secondary {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.quotation {
+    font-size: 3.9rem;
+    margin: 70px;
+    font-weight: bolder;
+    color: var(--thirdcolor);
+    text-shadow: var(--primary-shadow) var(--primarycolor);
+}
+
+.btn {
+    border: none;
+    font-weight: bold;
+    padding: 10px 40px;
+    font-size: 23px;
+    cursor: pointer;
+    background-color: var(--fifthcolor);
+    color: var(--whitecolor);
+    transition: all 1s;
+}
+
+.btn:hover {
+    color: var(--thirdcolor);
+}
+
+.center {
+    text-align: center;
+}
+
+/* Navigation Bar  */
+#navbar {
+    display: flex;
+    align-items: center;
+    /* Position Should not be static to avoid overflow of background in ::before  */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar::before {
+    content: "";
+    position: absolute;
+    background-color: var(--thirdcolor);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .5;
+}
+
+#navbar ul {
+    display: flex;
+}
+
+#navbar li {
+    list-style: none;
+}
+
+#navbar a {
+    display: block;
+    text-decoration: none;
+    padding: 6px 18px;
+    margin: 5px 25px;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    color: var(--whitecolor);
+    transition: all 1s;
+}
+
+#navbar a:hover {
+    color: var(--fifthcolor);
+    background-color: var(--secondarycolor);
+    border: 2px solid white;
+}
+
+/* Navigation Bar:Logo and Images  */
+#logo {
+    margin: 5px 20px;
+}
+
+#logo img {
+    width: 50px;
+}
+
+/* Home Section  */
+#home-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+    color: var(--whitecolor);
+    padding: 0px 300px;
+}
+
+#home-section::before {
+    content: "";
+    position: absolute;
+    background: url(../Images/bg.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .9;    
+}
+
+/* Service Section  */
+#service-section {
+    background-color: antiquewhite;
+    padding-top: 30px;
+}
+
+#service-section .container {
+    display: flex;
+    padding: 0px 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+#service-section .box {
+    margin: 20px;
+    border: 2px solid red;
+    padding: 20px 15px;
+    border-radius: 20px;
+    background-color: #df9b1e52;
+    transition: all 2s;
+    cursor: pointer;
+}
+#service-section .box:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 3px orange ,-3px -3px 3px orange;
+}
+
+/* Service: Images */
+#service-section .box img {
+    display: block;
+    width: 330px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Clients Section */
+#client-section {
+    background-color: #e0d8d2;
+}
+
+#client-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 150px;
+}
+/* Clients:Images  */
+.clients img {
+    height: 280px;
+    width: 300px;
+    margin: 20px;
+    transition: all 2s;
+}
+.clients img:hover{
+transform: scale(1.2);
+}
+
+/* Contact Section */
+#contact-section {
+    padding-bottom: 30px;
+    color: var(--fifthcolor);
+    position: relative;  
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    text-shadow: var(--primary-shadow) black;
+}
+
+.inputs {
+    margin: 10px 0px;
+    color: var(--whitecolor);
+}
+
+input,
+textarea {
+    width: 40vw;
+    font-size: 1.1rem;
+    padding: 8px 10px;
+    margin: 5px 0px;
+    border-radius: 7px;
+    background-color: rgba(225, 224, 224, 0.8);
+}
+input:hover,textarea:hover{
+    box-shadow: 3px 3px 3px white ,  -3px -3px 3px white;
+    border: none;
+}
+
+#contact-section::before {
+    content: "";
+    background: url(../Images/bg2.jpg) no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .75;
+}
+
+/* footer  */
+footer {
+    background-color: rgb(31, 30, 30);
+    color: white;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
